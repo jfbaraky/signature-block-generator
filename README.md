@@ -11,3 +11,6 @@ E escolher as seguintes propriedades:
 
 
 Então vai mostrar em tempo real a assinatura de e-mail em uma caixa logo abaixo do formulário onde o usuário pode copiar e colar na assinatura do e-mail.
+
+## Exemplo visual
+![](https://mk0salesmatetve0a8r2.kinstacdn.com/wp-content/uploads/2018/09/signature_example.png)

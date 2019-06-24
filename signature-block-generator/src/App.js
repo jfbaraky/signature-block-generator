@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Signature from './components/Signature'
+import Signature from './components/Signature/Signature' ;
 
 class App extends Component {
     render() {
@@ -8,6 +8,7 @@ class App extends Component {
         <div className="App">
           <h1> Signature Generator </h1>
           <Signature />
+          
         </div>
       );
     }

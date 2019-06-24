@@ -100,11 +100,16 @@ export default class Signature extends React.Component {
         <div className="example">
           <h1> {JSON.stringify(this.state.nomecompleto)}  </h1>
           <h3> {JSON.stringify(this.state.cargoatual)}</h3>
-          <h4> {JSON.stringify(this.state.nomeempresa)}, {JSON.stringify(this.state.logoempresa)}</h4>
-          <h5> {JSON.stringify(this.state.avempresa)}, {JSON.stringify(this.state.salaempresa)}</h5>
-          <h5> [bairro-empresa], [cidade-empresa], [numero-empresa] </h5>
-          <h5> [telefone-empresa] </h5>
-          <h5> [e-mail-empresa] [redes-sociais-empresas]</h5>
+          <h4> {JSON.stringify(this.state.nomeempresa)}, 
+               {JSON.stringify(this.state.logoempresa)}</h4>
+          <h5> {JSON.stringify(this.state.avempresa)}, 
+               {JSON.stringify(this.state.salaempresa)}</h5>
+          <h5> {JSON.stringify(this.state.bairroempresa)}
+               {JSON.stringify(this.state.cidadeempresa)}
+               {JSON.stringify(this.state.numeroempresa)} </h5>
+          <h5> {JSON.stringify(this.state.telefoneempresa)}</h5>
+          <h5> {JSON.stringify(this.state.emailempresa)}
+               {JSON.stringify(this.state.redessociaisempresas)}</h5>
         </div>
         <br/>
         <button onClick={this.onSubmit}>Enviar</button>

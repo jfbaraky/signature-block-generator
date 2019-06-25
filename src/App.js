@@ -6,7 +6,7 @@ class App extends Component {
     render() {
       return (
         <div className="App">
-          <h1> Signature Generator </h1>
+          <h4> @douglasabnovato </h4>
           <Signature />
           
         </div>

@@ -1,3 +1,4 @@
+/* Input */
 *{ 
     margin:0; 
     padding:0;
@@ -5,7 +6,7 @@
 
 body{ 
     font:100% normal Arial, Helvetica, sans-serif; 
-    background:#161712;
+    background:#EEE9E9 ; /* #161712 */
 }
 
 .inputs,input,select{
@@ -74,4 +75,43 @@ div.box .button{
     border-top: 1px double #660000;
     border-left:1px double #FF0033;
     border-right:1px double #FF0033;
+}
+
+/* modelo */
+
+div.assinatura {
+    margin:0 auto;
+    width:500px;
+    background:#F8F8FF;
+    position:relative;
+    top:50px;
+    border:1px solid #262626;
+}
+ 
+div.assinatura h1 { 
+    color:#000000;
+    font-size:18px;
+    text-transform:uppercase;
+    padding:5px 0 5px 5px;
+    border-bottom:1px solid #161712;
+    border-top:1px solid #161712; 
+}
+ 
+div.assinatura label {
+    width:100%;
+    display: block;
+    background:#F8F8FF;
+    border-top:1px solid #262626;
+    border-bottom:1px solid #161712;
+    padding:10px 0 10px 0;
+}
+ 
+div.assinatura label span {
+    display: block;
+    color:#000000;
+    font-size:15px;
+    float:left;
+    width:100px;
+    text-align:right;
+    padding:5px 20px 0 0;
 }

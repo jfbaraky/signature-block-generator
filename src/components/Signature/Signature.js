@@ -79,8 +79,9 @@ export default class Signature extends React.Component {
             </label>
           </div>
         </div>
-        <div id="inputs">          
-          <div className="box">
+        <br/><br/><br/>
+        <div id="modelo">          
+          <div className="assinatura">
             <h1>Modelo da sua assinatura :</h1>
             <label><span>{JSON.stringify(this.state.nomecompleto)}</span></label>
             <label><span>{JSON.stringify(this.state.cargoatual)}</span></label>

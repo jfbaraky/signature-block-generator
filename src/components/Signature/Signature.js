@@ -8,6 +8,7 @@ export default class Signature extends React.Component {
       nomecompleto: "",
       cargoatual: "",
       telefone: "",
+      email: "",
       site: "",
       cores: ""
     };
@@ -18,6 +19,7 @@ export default class Signature extends React.Component {
       this.setState(state);
     };
   }
+
   render() {
     return (
       <div>
@@ -30,6 +32,7 @@ export default class Signature extends React.Component {
                 className="input_text"
                 type="text"
                 name="nomecompleto"
+                placeholder="Linus Torvalds"
                 value={this.state.nomecompleto}
                 onChange={this.onChange} />
             </label>
@@ -39,6 +42,7 @@ export default class Signature extends React.Component {
                 className="input_text"
                 type="text"
                 name="cargoatual"
+                placeholder="ReactJS Developer"
                 value={this.state.cargoatual}
                 onChange={this.onChange} />
             </label>
@@ -48,7 +52,18 @@ export default class Signature extends React.Component {
                 className="input_text"
                 type="text"
                 name="telefone"
+                placeholder="+55 (44) 9 8888-2222"
                 value={this.state.telefone}
+                onChange={this.onChange} />
+            </label>
+            <label>
+              <span>E-mail</span>
+              <input
+                className="input_text"
+                type="text"
+                name="email"
+                placeholder="linustorvalds@appmasters.com" 
+                value={this.state.email}
                 onChange={this.onChange} />
             </label>
             <label>
@@ -57,6 +72,7 @@ export default class Signature extends React.Component {
                 className="input_text"
                 type="text"
                 name="site"
+                placeholder="linustorvalds.appmasters.com" 
                 value={this.state.site}
                 onChange={this.onChange} />
             </label>
@@ -80,6 +96,7 @@ export default class Signature extends React.Component {
             <h3>{JSON.stringify(this.state.nomecompleto)}</h3>
             <p>{JSON.stringify(this.state.cargoatual)}</p>
             <p>{JSON.stringify(this.state.telefone)}</p>
+            <p>{JSON.stringify(this.state.email)}</p>
             <p>{JSON.stringify(this.state.site)}</p>
             <p>{JSON.stringify(this.state.cores)}</p>
           </div>

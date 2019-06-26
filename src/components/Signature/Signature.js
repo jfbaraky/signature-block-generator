@@ -19,7 +19,6 @@ export default class Signature extends React.Component {
       this.setState(state);
     };
   }
-
   render() {
     return (
       <div>
@@ -44,6 +43,16 @@ export default class Signature extends React.Component {
                 name="cargoatual"
                 placeholder="ReactJS Developer"
                 value={this.state.cargoatual}
+                onChange={this.onChange} />
+            </label>
+            <label>
+              <span>Empresa </span>
+              <input
+                className="input_text"
+                type="text"
+                name="empresa"
+                placeholder="App Masters"
+                value={this.state.empresa}
                 onChange={this.onChange} />
             </label>
             <label>
@@ -89,20 +98,21 @@ export default class Signature extends React.Component {
             </label>
           </div>
         </div>
-        <br/><br/>
+        <br/>
         <div id="modelo">          
           <div className="assinatura">
             <h1>Modelo da sua assinatura :</h1>
-            <h3>{JSON.stringify(this.state.nomecompleto)}</h3>
-            <p>{JSON.stringify(this.state.cargoatual)}</p>
-            <p>{JSON.stringify(this.state.telefone)}</p>
-            <p>{JSON.stringify(this.state.email)}</p>
-            <p>{JSON.stringify(this.state.site)}</p>
-            <p>{JSON.stringify(this.state.cores)}</p>
+            <h3>{this.state.nomecompleto}</h3>
+            <p>{this.state.cargoatual}</p>
+            <p>{this.state.empresa}</p>
+            <p>{this.state.telefone}</p>
+            <p><a href="default.asp" target="_blank">{this.state.email}</a></p>
+            <p><a href="default.asp" target="_blank">{this.state.site}</a></p>
           </div>
-        </div>
-        <br/><br/>
+        </div> 
+        <br/><br/><br/>     
       </div>
+
     );
   }
 }

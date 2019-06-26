@@ -17,16 +17,13 @@ export default class Signature extends React.Component {
       state[campo] = evento.target.value;
       this.setState(state);
     };
-    this.onSubmit = (evento) => {
-      evento.preventDefault();
-    };
   }
   render() {
     return (
       <div>
         <div id="inputs">
           <div className="box">
-          <h1>Preencha detalhes da sua assinatura :</h1>
+            <h1>Preencher detalhes da sua assinatura :</h1>
             <label>
               <span>Nome Completo</span>
               <input
@@ -65,7 +62,7 @@ export default class Signature extends React.Component {
             </label>
             <label>
               <span>Cores</span>
-              <select name="input_text" onChange={this.onChange} value={this.state.cores}>
+              <select id="cor" name="input_text" value={this.state.cores}>
                 <option value="">Selecione</option>
                 <option value="1">Preto</option>
                 <option value="2">Azul</option>
@@ -73,24 +70,21 @@ export default class Signature extends React.Component {
                 <option value="4">Amarelo</option>
                 <option value="5">Branco</option>
               </select>
-            </label>            
-            <label>
-              <input onClick={this.onSubmit} type="button" className="button" value="Enviar" />
             </label>
           </div>
         </div>
-        <br/><br/><br/>
+        <br/><br/>
         <div id="modelo">          
           <div className="assinatura">
             <h1>Modelo da sua assinatura :</h1>
-            <label><span>{JSON.stringify(this.state.nomecompleto)}</span></label>
-            <label><span>{JSON.stringify(this.state.cargoatual)}</span></label>
-            <label><span>{JSON.stringify(this.state.telefone)}</span></label>
-            <label><span>{JSON.stringify(this.state.site)}</span></label>
-            <label><span>{JSON.stringify(this.state.cores)}</span></label>
+            <h3>{JSON.stringify(this.state.nomecompleto)}</h3>
+            <p>{JSON.stringify(this.state.cargoatual)}</p>
+            <p>{JSON.stringify(this.state.telefone)}</p>
+            <p>{JSON.stringify(this.state.site)}</p>
+            <p>{JSON.stringify(this.state.cores)}</p>
           </div>
         </div>
-        <br />
+        <br/><br/>
       </div>
     );
   }

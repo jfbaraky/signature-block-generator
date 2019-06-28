@@ -13,8 +13,8 @@ E escolher as seguintes propriedades:
 Então vai mostrar em tempo real a assinatura de e-mail em uma caixa logo abaixo do formulário onde o usuário pode copiar e colar na assinatura do e-mail.
 
 ### Exemplo input
-- Bruno Volpato
-- Produtor de Conteúdo | Marketing
+- Bruno Volpato Salgado
+- Produtor de Conteúdo | Marketing Digital 
 - Resultados Digitais
 - +55 (48) 99999-9999
 - bruno.volpato@resultadosdigitais.com.br

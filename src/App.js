@@ -6,9 +6,7 @@ class App extends Component {
     render() {
       return (
         <div className="App">
-          <h4> @douglasabnovato </h4>
           <Signature />
-          
         </div>
       );
     }

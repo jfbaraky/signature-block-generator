@@ -1,4 +1,7 @@
 # Signature Block Generator
+
+Projeto feito por [Douglas Novato](https://github.com/douglasabnovato).
+
 Gerador de assinatura para email.
 Usuário pode incluir:
 - Nome

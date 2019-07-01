@@ -21,3 +21,7 @@ Então vai mostrar em tempo real a assinatura de e-mail em uma caixa logo abaixo
 
 ## Exemplo visual
 ![](https://mk0salesmatetve0a8r2.kinstacdn.com/wp-content/uploads/2018/09/signature_example.png)
+
+## Pendência
+- não está editando a cor 
+- usar ícones font-awesome

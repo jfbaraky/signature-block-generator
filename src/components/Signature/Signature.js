@@ -22,6 +22,7 @@ export default class Signature extends React.Component {
   render() {
     return (
       <div>
+        <h4>Gerador de Assinatura para E-mail</h4>
         <div id="inputs">
           <div className="box">
             <h1>Preencher detalhes da sua assinatura :</h1>
@@ -110,7 +111,11 @@ export default class Signature extends React.Component {
             <p><a href="default.asp" target="_blank">{this.state.site}</a></p>
           </div>
         </div> 
-        <br/><br/><br/>     
+        <br/>
+        <div>
+          <a href="https://i2.wp.com/googlediscovery.com/wp-content/uploads/google-logo-3.jpg?fit=1604%2C802&ssl=1">logo-google</a>
+          <a href="https://c.s-microsoft.com/en-us/CMSImages/page-sharing-thumbnail.jpg?version=ad58d6d8-0f5a-b7a8-ea50-939410935c7c">logo-microsoft</a>    
+        </div>
       </div>
 
     );

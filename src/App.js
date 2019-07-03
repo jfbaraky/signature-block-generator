@@ -6,6 +6,17 @@ import Signature from './components/Signature/Signature';
 import TutorialGmail from './components/TutorialGmail/TutorialGmail';
 import TutorialOutlook from './components/TutorialOutlook/TutorialOutlook';
 
+//$ yarn add @fortawesome/fontawesome-svg-core
+//$ yarn add @fortawesome/free-solid-svg-icons
+//$ yarn add @fortawesome/react-fontawesome
+//$ yarn add @fortawesome/free-brands-svg-icons
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faCheckSquare, faCoffee)
+
 function Gerador() {
   return(
     <div>

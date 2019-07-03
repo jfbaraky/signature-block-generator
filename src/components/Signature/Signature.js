@@ -1,6 +1,22 @@
 import React from 'react';
 import './signature.css';
 
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+function IconeGoogle() {
+  return (
+    <Link to="/tutorial-gmail"><FontAwesomeIcon icon={['fab', 'google']} /></Link>
+  );
+}
+
+function IconeMicrosoft() {
+  return (
+    <Link to="/tutorial-outlook"><FontAwesomeIcon icon={['fab', 'microsoft']} /></Link>
+  );
+}
+
 export default class Signature extends React.Component {
   constructor() {
     super();
@@ -20,9 +36,9 @@ export default class Signature extends React.Component {
     };
   }
   render() {
-    return (
-      <div>
-        <h4>Gerador de Assinatura para E-mail</h4>
+    return ( 
+      <div>         
+        Gerador de Assinatura para E-mail
         <div id="inputs">
           <div className="box">
             <h1>Preencher detalhes da sua assinatura :</h1>
@@ -97,8 +113,8 @@ export default class Signature extends React.Component {
                 <option value="5">Branco</option>
               </select>
             </label>
-          </div>
-        </div>
+          </div>{/* end-div-box */}
+        </div> {/* end-div-inputs */}
         <br/>
         <div id="modelo">          
           <div className="assinatura">
@@ -109,14 +125,19 @@ export default class Signature extends React.Component {
             <p>{this.state.telefone}</p>
             <p><a href="default.asp" target="_blank">{this.state.email}</a></p>
             <p><a href="default.asp" target="_blank">{this.state.site}</a></p>
-          </div>
-        </div> 
-        <br/>
-        <div>
-          <a href="https://i2.wp.com/googlediscovery.com/wp-content/uploads/google-logo-3.jpg?fit=1604%2C802&ssl=1">logo-google</a>
-          <a href="https://c.s-microsoft.com/en-us/CMSImages/page-sharing-thumbnail.jpg?version=ad58d6d8-0f5a-b7a8-ea50-939410935c7c">logo-microsoft</a>    
-        </div>
-      </div>
+          </div> {/** end-div-assinatura*/}
+        </div> {/** end-div-modelo*/}
+        <br/>   
+        <div id="Tutoriais">          
+          <div className="Tutorial">
+            <h1>Tutorial de Assinatura 
+              <IconeGoogle/>
+               ou  
+              <IconeMicrosoft />
+            </h1>
+          </div> {/** end-div-Tutorial*/}
+        </div> {/** end-div-Tutoriais*/}     
+      </div>/** end-div*/
 
     );
   }

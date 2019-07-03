@@ -94,3 +94,24 @@ div.assinatura p, h3 {
     text-align: justify;
     letter-spacing: 3px;
 }
+
+/* Tutoriais de assinatura*/
+
+div.Tutorial {
+    margin:0 auto;
+    width:500px;
+    background:#F8F8FF;
+    position:relative;
+    top:50px;
+    border:1px solid #262626;
+}
+
+div.Tutorial h1 { 
+    color:#000000;
+    font-size:18px;
+    text-transform:uppercase;
+    padding:5px 0 5px 5px;
+    border-bottom:1px solid #161712;
+    border-top:1px solid #161712; 
+    text-align: center;
+}

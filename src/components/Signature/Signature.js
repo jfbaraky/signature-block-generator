@@ -1,6 +1,22 @@
 import React from 'react';
 import './signature.css';
 
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+function IconeGoogle() {
+  return (
+    <Link to="/tutorial-gmail"><FontAwesomeIcon icon={['fab', 'google']} /></Link>
+  );
+}
+
+function IconeMicrosoft() {
+  return (
+    <Link to="/tutorial-outlook"><FontAwesomeIcon icon={['fab', 'microsoft']} /></Link>
+  );
+}
+
 export default class Signature extends React.Component {
   constructor() {
     super();
@@ -8,6 +24,7 @@ export default class Signature extends React.Component {
       nomecompleto: "",
       cargoatual: "",
       telefone: "",
+      email: "",
       site: "",
       cores: ""
     };
@@ -17,22 +34,21 @@ export default class Signature extends React.Component {
       state[campo] = evento.target.value;
       this.setState(state);
     };
-    this.onSubmit = (evento) => {
-      evento.preventDefault();
-    };
   }
   render() {
-    return (
-      <div>
+    return ( 
+      <div>         
+        Gerador de Assinatura para E-mail
         <div id="inputs">
           <div className="box">
-          <h1>Preencha detalhes da sua assinatura :</h1>
+            <h1>Preencher detalhes da sua assinatura :</h1>
             <label>
               <span>Nome Completo</span>
               <input
                 className="input_text"
                 type="text"
                 name="nomecompleto"
+                placeholder="Linus Torvalds"
                 value={this.state.nomecompleto}
                 onChange={this.onChange} />
             </label>
@@ -42,7 +58,18 @@ export default class Signature extends React.Component {
                 className="input_text"
                 type="text"
                 name="cargoatual"
+                placeholder="ReactJS Developer"
                 value={this.state.cargoatual}
+                onChange={this.onChange} />
+            </label>
+            <label>
+              <span>Empresa </span>
+              <input
+                className="input_text"
+                type="text"
+                name="empresa"
+                placeholder="App Masters"
+                value={this.state.empresa}
                 onChange={this.onChange} />
             </label>
             <label>
@@ -51,7 +78,18 @@ export default class Signature extends React.Component {
                 className="input_text"
                 type="text"
                 name="telefone"
+                placeholder="+55 (44) 9 8888-2222"
                 value={this.state.telefone}
+                onChange={this.onChange} />
+            </label>
+            <label>
+              <span>E-mail</span>
+              <input
+                className="input_text"
+                type="text"
+                name="email"
+                placeholder="linustorvalds@appmasters.com" 
+                value={this.state.email}
                 onChange={this.onChange} />
             </label>
             <label>
@@ -60,12 +98,13 @@ export default class Signature extends React.Component {
                 className="input_text"
                 type="text"
                 name="site"
+                placeholder="linustorvalds.appmasters.com" 
                 value={this.state.site}
                 onChange={this.onChange} />
             </label>
             <label>
               <span>Cores</span>
-              <select name="input_text" onChange={this.onChange} value={this.state.cores}>
+              <select id="cor" name="input_text" value={this.state.cores}>
                 <option value="">Selecione</option>
                 <option value="1">Preto</option>
                 <option value="2">Azul</option>
@@ -73,25 +112,33 @@ export default class Signature extends React.Component {
                 <option value="4">Amarelo</option>
                 <option value="5">Branco</option>
               </select>
-            </label>            
-            <label>
-              <input onClick={this.onSubmit} type="button" className="button" value="Enviar" />
             </label>
-          </div>
-        </div>
-        <br/><br/><br/>
+          </div>{/* end-div-box */}
+        </div> {/* end-div-inputs */}
+        <br/>
         <div id="modelo">          
           <div className="assinatura">
             <h1>Modelo da sua assinatura :</h1>
-            <label><span>{JSON.stringify(this.state.nomecompleto)}</span></label>
-            <label><span>{JSON.stringify(this.state.cargoatual)}</span></label>
-            <label><span>{JSON.stringify(this.state.telefone)}</span></label>
-            <label><span>{JSON.stringify(this.state.site)}</span></label>
-            <label><span>{JSON.stringify(this.state.cores)}</span></label>
-          </div>
-        </div>
-        <br />
-      </div>
+            <h3>{this.state.nomecompleto}</h3>
+            <p>{this.state.cargoatual}</p>
+            <p>{this.state.empresa}</p>
+            <p>{this.state.telefone}</p>
+            <p><a href="default.asp" target="_blank">{this.state.email}</a></p>
+            <p><a href="default.asp" target="_blank">{this.state.site}</a></p>
+          </div> {/** end-div-assinatura*/}
+        </div> {/** end-div-modelo*/}
+        <br/>   
+        <div id="Tutoriais">          
+          <div className="Tutorial">
+            <h1>Tutorial de Assinatura 
+              <IconeGoogle/>
+               ou  
+              <IconeMicrosoft />
+            </h1>
+          </div> {/** end-div-Tutorial*/}
+        </div> {/** end-div-Tutoriais*/}     
+      </div>/** end-div*/
+
     );
   }
 }
